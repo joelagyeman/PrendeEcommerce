@@ -5,26 +5,42 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './app-core/common/header/header.component';
 import { FooterComponent } from './app-core/common/footer/footer.component';
-import { RegisterComponent } from './components/auth/register/register.component';
-import { LoginComponent } from './components/auth/login/login.component';
-import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
-import { CartComponent } from './components/cart/cart.component';
+import { ProductListingComponent } from './components/marketplace/product-listing/product-listing.component';
+import { ProductDetailComponent } from './components/marketplace/product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { ShopDetailComponent } from './components/shop-detail/shop-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment.prod';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent,
-    LoginComponent,
-    ForgotPasswordComponent,
-    CartComponent
+    ProductListingComponent,
+    ProductDetailComponent,
+    HomeComponent,
+    ShopComponent,
+    ShopDetailComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    {provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
