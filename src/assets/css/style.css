@@ -391,7 +391,7 @@ h6,
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
-    color: #3D464D;
+    color: #3A1F4A;
 }
 
 h1,
@@ -2509,8 +2509,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #212529;
-    background-color: #30D5C8;
-    border-color: #30D5C8;
+    background-color: #3A1F4A;
+    border-color: #3A1F4A;
 }
 
 .btn-primary:hover {
@@ -6432,7 +6432,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #30D5C8 !important;
+    background-color: #3A1F4A !important;
 }
 
 a.bg-primary:hover,
@@ -9607,11 +9607,11 @@ button.bg-dark:focus {
 }
 
 .text-white {
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
 .text-primary {
-    color: #30D5C8 !important;
+    color: #924FBA !important;
 }
 
 a.text-primary:hover,
@@ -9674,7 +9674,7 @@ a.text-light:focus {
 }
 
 .text-dark {
-    color: #3D464D !important;
+    color: #ffffff !important;
 }
 
 a.text-dark:hover,
@@ -9834,7 +9834,7 @@ h6 {
 }
 
 .btn.btn-primary {
-    color: #3D464D !important;
+    color: #FFFFFF !important;
 }
 
 .btn-square {
@@ -9863,13 +9863,13 @@ h6 {
 
 .navbar-dark .navbar-nav .nav-link {
     padding: 20px 10px;
-    color: #F5F5F5;
+    color: #FFFFFF;
     outline: none;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #30D5C8;
+    color: #924FBA;
 }
 
 @media (max-width: 991.98px) {

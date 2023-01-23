@@ -1,13 +1,19 @@
 <link href="../../../../assets/img/logo.png" rel="favicon">
 <div class="container-fluid">
-    <div class="row align-items-center justify-content-between bg-light py-1 d-none d-lg-flex">
+    <div class="row align-items-center  bg-light py-1 d-none d-lg-flex">
         <div class="col-lg-4">
             <a href="" class="text-decoration-none">
-                <img class="" style="width: 64px; height: 64px;" src="../assets/img/logo.png">
-
-
+                <img class="" style="width: 64px; height: 64px;" src="../../../../assets/img/PrendeLogoRebrand (1).png">
             </a>
+
+
+
         </div>
+
+        <div class="col" id="header_title">
+            <h2>PRENDE</h2>
+        </div>
+
         <div class="col-lg-4 col-6 text-left">
             <form action="">
                 <div class="input-group">
@@ -55,33 +61,20 @@
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-                <a href="" class="text-decoration-none d-block d-lg-none">
-                    <img class="" style="width: 64px; height: 64px;" src="../assets/img/logo.png">
-                </a>
-
-
-
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                         <a routerLink="/home" class="nav-item nav-link active">Home</a>
-                        <a routerLink="/shop" class="nav-item nav-link">Prende Store</a>
-                        <a routerLink="/shop-detail" class="nav-item nav-link">Prende Details</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
-                            <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                <a routerLink="/checkout" class="dropdown-item">Checkout</a>
-                            </div>
-                        </div>
+                        <a routerLink="/shop" class="nav-item nav-link">Prende Shop</a>
+                        <a routerLink="/cart" class="nav-item nav-link">Cart</a>
+                        <a routerLink="/checkout" class="nav-item nav-link">Checkout</a>
                         <a routerLink="/contact" class="nav-item nav-link">Contact</a>
                     </div>
 
                 </div>
                 <div class="navbar-nav py-0 d-lg-block">
-                    <a href="" class="btn px-0 ml-3">
+                    <a routerLink="/cart" class="btn px-0 ml-3">
                         <i class="fas fa-shopping-cart text-primary"></i>
-                        <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                        <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">{{(cartProducts | async)?.length}}</span>
                     </a>
                 </div>
             </nav>

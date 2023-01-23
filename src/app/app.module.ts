@@ -17,6 +17,7 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.prod';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     ShopComponent,
     ShopDetailComponent,
     ContactComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,10 +14,13 @@ export class ShopComponent implements OnInit {
 
   constructor(afs: AngularFirestore) {
     this.productsCollection = afs.collection<Product>('prende_store');
-    this.products$ = this.productsCollection.valueChanges();
+    this.products$ = this.productsCollection.valueChanges({ idField: 'id' });
   }
 
   ngOnInit(): void {
   }
 
+  clickProduct(product: Product) {
+    console.log('Clicked Product');
+  }
 }

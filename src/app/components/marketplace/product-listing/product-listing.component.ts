@@ -18,4 +18,6 @@ export class ProductListingComponent implements OnInit {
     });
   }
 
+  addtocart(){}
+
 }

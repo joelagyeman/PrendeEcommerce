@@ -10,6 +10,11 @@ export class CheckoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+  public button(){
+    prompt("Success");
+
+}
 }
